@@ -1,0 +1,13 @@
+ul,li,div {padding: 0;margin: 0;}
+li {list-style: none;}
+/*轮播图*/
+.slide-container {width: 200px;height:230px;position: relative;}
+
+.slide-container ol {clear:both;position: absolute;right: 0;bottom: 10px;z-index: 99;}
+.slide-container ol li {width: 20px;height: 20px;border-radius: 50%;float: left;text-align: center;line-height: 20px;background: #ccc;}
+.on {background: red;color: #fff;}
+
+.slide1 {width: 200px;height: 200px;position: relative;overflow:hidden;}
+.slide1 ul {width: 1400px;position: absolute;right: 0px;}
+.slide1 ul li {float: left;overflow: hidden;}
+.slide1 ul li img {width: 200px;height: 200px;}

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<title>slide-demo</title>
+	<link rel="stylesheet" type="text/css" href="src/style.css">
+</head>
+<body>
+<div class="slide-container">
+	<div class="slide1">
+		<ul style="left:-200px">
+			<li><img src="src/5.jpg" alt=""></li>
+			<li><img src="src/1.jpg" alt=""></li>
+			<li><img src="src/2.jpg" alt=""></li>
+			<li><img src="src/3.jpg" alt=""></li>
+			<li><img src="src/4.jpg" alt=""></li>
+			<li><img src="src/5.jpg" alt=""></li>
+			<li><img src="src/1.jpg" alt=""></li>
+		</ul>	
+	</div>
+	<ol>
+		
+	</ol>
+	<button id="prev">prev</button>
+	<button id="next">next</button>
+</div>
+<script type="text/javascript" src="slide.js"></script>
+<script type="text/javascript">
+	var slideDiv = getByClass("slide-container")[0],
+		slideImg = slideDiv.getElementsByTagName('ul')[0],
+		slideOl = slideDiv.getElementsByTagName('ol')[0],
+		opt = {
+			interval:200,
+			time:10
+		};
+	slide(slideImg,slideOl,opt);
+
+	function getByClass(cls,root){
+		var root = root ||document,
+			res = [];
+		if (root.getElementsByClassName) {
+			res = root.getElementsByClassName(cls.substring(0));
+		} else {
+			var tag = root.getElementsByTagName('*'),
+				reg = new RegExp("\\b" + cls.substring(1) + "\\b");
+			for (var i = 0, len = tag.length; i < len; i++){
+				if (tag[i].test(reg)) {
+					res.push(tag[i]);
+				}
+			}
+		}
+		return res;
+	}
+
+</script>
+</body>
+</html>

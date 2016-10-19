@@ -2,9 +2,7 @@
  * 注意：添加图片时按照示例前后各增加一个
  * @ulEle 图片ul元素
  * @olEle 小图标ol元素
- * @opt    object-可选参数    
- 	order  boolean-默认true 顺序
- 	loop   boolean-默认true 循环
+ * @opt    object-可选参数 
  	interval   int-单位ms  完成切换的时间
  	time   int-单位ms 完成切换过程中移动的间隔
    @类名与样式的对应
@@ -17,8 +15,8 @@ function slide(ulEle,olEle,opt){
 	var curI = 0,
 		oImg = ulEle.getElementsByTagName('img'),
 		   w = oImg[0].width,
-	 nextBtn = oo('#next'),
-	 prevBtn = oo('#prev'),
+	 nextBtn = document.getElementById('#next'),
+	 prevBtn = document.getElementById('#prev'),
 	   index = 1,
 	animated = false,
 	   timer ;
